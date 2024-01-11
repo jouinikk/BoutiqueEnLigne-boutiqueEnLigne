@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoutiqueEnLigne.View.Admin.Details">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Id"/>
+            <Label x:Name="ClientName"/>
+            <ListView x:Name="commandLinesListView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" HeightRequest="20">
+                                <Label Text="{Binding Quantite}" FontSize="20"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
